@@ -1,7 +1,5 @@
 const PATH = require('path');
-const FS = require('fs');
 const FS_PROMISES = require('fs/promises');
-const { error } = require('console');
 
 const coped_folder_name = 'files';
 const clone_folder_name = `${coped_folder_name}-copy`;
@@ -33,13 +31,5 @@ async function copyFolder(coped_folder_parent, clone_folder_parent, coped_folder
     }
   });
 }
-
-// async function removeDir(path) {
-//   FS.access(path, FS.constants.F_OK, error => {
-//     if(error) {
-//       FS_PROMISES.re
-//     }
-//   });
-// }
 
 copyFolder(__dirname, __dirname, coped_folder_name, clone_folder_name);
